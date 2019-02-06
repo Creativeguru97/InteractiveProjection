@@ -46,6 +46,7 @@ class Bubble{//Define the class.
     x=x+random(-2,2);
   }
   
+  //Reduce one chance
   void top(){
     if(y>=height-32){
       x = random(64+width-64);

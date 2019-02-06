@@ -69,6 +69,7 @@ void draw(){
     //line(BubbleX, BubbleY, ColiPixX2, ColiPixY2);
   }
   
+  
   leftChances();
   
   if(leftChances == 0){
