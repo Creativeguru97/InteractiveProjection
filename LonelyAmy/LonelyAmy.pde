@@ -1,15 +1,14 @@
 Girl Amy;
-//Head h;
+
 
 void setup(){
   size(1920,540);
-  Amy = new Girl();
-  //h = new Head();
+  Amy = new Girl(width/2, height/2);
+
 }
 
 void draw(){
   background(255);
-  Amy.display();
-  //h.display();
-  
+  Amy.drawAmy();
+
 }
