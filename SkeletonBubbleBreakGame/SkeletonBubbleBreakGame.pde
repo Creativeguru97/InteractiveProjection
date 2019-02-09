@@ -94,7 +94,7 @@ void drawBody(KJoint[] joints) {
   drawBone(joints, KinectPV2.JointType_WristRight, KinectPV2.JointType_HandRight);
   drawBone(joints, KinectPV2.JointType_HandRight, KinectPV2.JointType_HandTipRight);
   drawBone(joints, KinectPV2.JointType_WristRight, KinectPV2.JointType_ThumbRight);
-  //Set the left hand bubble break point
+  //Set the right hand bubble break point
   ColiPixX2 = joints[KinectPV2.JointType_HandRight].getX();
   ColiPixY2 = joints[KinectPV2.JointType_HandRight].getY();
 

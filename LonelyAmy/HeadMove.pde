@@ -24,23 +24,23 @@ class HeadMove {
   
   void move(){
     //Acceleration factors
-    float d = dist(HeadX, 0, mouseX, 0);
-    float d1 = dist(HeadX, 0, mouseX-100, 0);
-    float d2 = dist(HeadX, 0, mouseX+100, 0);
+    float d = dist(HeadX, 0, PersonX, 0);
+    float d1 = dist(HeadX, 0, PersonX-100, 0);
+    float d2 = dist(HeadX, 0, PersonX+100, 0);
     
     
-    if(mouseX-170 > HeadX){
+    if(PersonX-170 > HeadX){
       speedX = d1/2.5;
       HeadX = HeadX + speedX/20;
-    }else if(mouseX+170 < HeadX){
+    }else if(PersonX+170 < HeadX){
       speedX = d2/2.5;
       HeadX = HeadX - speedX/20;
-    }else if(mouseX-170 <= HeadX && HeadX <= mouseX+170){
+    }else if(PersonX-170 <= HeadX && HeadX <= PersonX+170){
       speedX = 0;
     }
     
     //Bouncing head along Y axis
-    if(mouseX-170 > HeadX || mouseX+170 < HeadX){
+    if(PersonX-170 > HeadX || PersonX+170 < HeadX){
       HeadY += speedY;
       if(HeadY >= 328){
         HeadY = 328;
@@ -57,25 +57,25 @@ class HeadMove {
   void frameNext(){
     
     index += frameSpeed;
-    if(mouseX-130 > HeadX){
+    if(PersonX-130 > HeadX){
       frameSpeed =-2;
       if(index <= 1){
       frameSpeed = 0;
       }
       
-    }else if(mouseX-130 <= HeadX && mouseX > HeadX){
+    }else if(PersonX-130 <= HeadX && PersonX > HeadX){
       frameSpeed = 0.8;
       if(index >= 14){
         frameSpeed = 0;
         index = 14;
       }
-    }else if(mouseX+130 >= HeadX && mouseX <= HeadX){
+    }else if(PersonX+130 >= HeadX && PersonX <= HeadX){
       frameSpeed = -0.8;
       if(index <= 14){
         frameSpeed = 0;
         index = 14;
       }
-    }else if(mouseX+130 < HeadX){
+    }else if(PersonX+130 < HeadX){
       frameSpeed =2;
       if(index >= HeadImages.length-2){
       frameSpeed = 0;
