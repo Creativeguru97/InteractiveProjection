@@ -8,6 +8,8 @@ float RightHandX;
 float RightHandY;
 float LeftHandX;
 float LeftHandY;
+float HeadX;
+float HeadY;
 
 int ignitionState;
 
@@ -71,6 +73,10 @@ void draw(){
       drawHandState(joints[KinectPV2.JointType_HandRight]);
       drawHandState(joints[KinectPV2.JointType_HandLeft]);
       
+      //Draw HeadParticle
+      for(int j = 0; j < 15; j++){
+        particles.add(new HeadParticle(texture));
+      }
     }
   }
   
@@ -131,6 +137,9 @@ void drawBody(KJoint[] joints) {
   drawJoint(joints, KinectPV2.JointType_ThumbRight);
 
   drawJoint(joints, KinectPV2.JointType_Head);
+  HeadX = joints[KinectPV2.JointType_Head].getX();
+  HeadY = joints[KinectPV2.JointType_Head].getY();
+
 }
 
 
