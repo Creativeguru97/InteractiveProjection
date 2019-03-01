@@ -20,8 +20,8 @@ class Particle2 extends Particle{
     //fill(100);
     imageMode(CENTER);
     tint(R, G, B, lifespan);
-    B -= lifespanOffset/25;
-    G -= lifespanOffset/3;
-    image(texture, LeftHand.x, LeftHand.y, 40, 40);
+    B -= lifespanOffset/12;
+    G -= lifespanOffset/1.5;
+    image(texture, LeftHand.x, LeftHand.y, 50, 50);
   }
 }
