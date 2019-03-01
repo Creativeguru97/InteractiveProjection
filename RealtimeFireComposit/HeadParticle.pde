@@ -1,6 +1,6 @@
 class HeadParticle extends Particle{
   //PVector Head = new PVector(random(HeadX-20, HeadX+20), random(HeadY-100, HeadY-80));
-  PVector Head = new PVector(HeadX, HeadY-100);
+  PVector Head = new PVector(HeadX, HeadY-120);
 
   //PVector LeftHand = new PVector(width/2+200, height/2);
 
