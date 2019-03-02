@@ -29,6 +29,8 @@ class Particle{
     velocity.add(acceleration);
     RightHand.add(velocity);
     lifespan -= lifespanOffset;
+    
+    
   }
 
   void display(){

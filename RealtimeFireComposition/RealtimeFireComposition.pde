@@ -16,6 +16,8 @@ int ignitionState;
 PImage texture;
 PImage BGimg;
 
+
+
 //ParticleSystem ps;
 //ArrayList<ParticleSystem> systems;
 Particle p;
@@ -52,8 +54,13 @@ void draw(){
   blendMode(ADD);
   
   //pushMatrix();
-  for(Particle p : particles){
-    p.excute();
+  for(int i = particles.size()-1; i >= 0; i--){
+      Particle p = particles.get(i);
+      p.excute();
+      
+      if(p.isDead()){
+        particles.remove(i);
+      }
   }
   //popMatrix();
   
