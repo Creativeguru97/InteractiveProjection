@@ -1,5 +1,5 @@
 class Particle{
-  PVector location;
+  //PVector location;
   PVector RightHand = new PVector(RightHandX, RightHandY-60);
   //PVector RightHand = new PVector(width/2-200, height/2);
 
