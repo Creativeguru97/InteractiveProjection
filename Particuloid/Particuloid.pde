@@ -27,7 +27,7 @@ void setup() {
   size(1920,1080, P3D);
   // We are now making random vehicles and storing them in an ArrayList
   vehicles = new ArrayList<Vehicle>();
-  for (int i = 0; i < 1800; i++) {
+  for (int i = 0; i < 2000; i++) {
     vehicles.add(new Vehicle(random(width),random(height), random(255),random(5, 9)));
   }
   kinect = new KinectPV2(this);
@@ -67,8 +67,8 @@ void draw() {
     v.seek();
   }
   
-  fill(255);
-  text(frameRate, 10,height*2/3);
+  //fill(255);
+  //text(frameRate, 10,height*2/3);
 }
 
 //void mousePressed() {
