@@ -31,8 +31,8 @@ class Vehicle {
      PVector separateForce = separate(vehicles);
      PVector seekForce = seek();
      //We weight those behaviors at here.
-     separateForce.mult(2);
-     seekForce.mult(1.2);
+     separateForce.mult(3);
+     seekForce.mult(2);
      applyForce(separateForce);
      applyForce(seekForce);
   }
