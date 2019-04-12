@@ -1,7 +1,8 @@
 import KinectPV2.KJoint;
 import KinectPV2.*;
 KinectPV2 kinect;
-
+PImage textureF;
+PImage textureB;
 
 float HeadX, HeadY;
 float NeckX, NeckY;
@@ -25,9 +26,12 @@ ArrayList<Vehicle> vehicles;
 
 void setup() {
   size(1920,1080, P3D);
+  textureF = loadImage("ParticleTextureFront.png");
+  textureB = loadImage("ParticleTexture.png");
+  
   // We are now making random vehicles and storing them in an ArrayList
   vehicles = new ArrayList<Vehicle>();
-  for (int i = 0; i < 2000; i++) {
+  for (int i = 0; i < 1500; i++) {
     vehicles.add(new Vehicle(random(width),random(height), random(255),random(5, 9)));
   }
   kinect = new KinectPV2(this);

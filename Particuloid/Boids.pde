@@ -31,8 +31,8 @@ class Vehicle {
      PVector separateForce = separate(vehicles);
      PVector seekForce = seek();
      //We weight those behaviors at here.
-     separateForce.mult(3);
-     seekForce.mult(2);
+     separateForce.mult(2);
+     seekForce.mult(1.2);
      applyForce(separateForce);
      applyForce(seekForce);
   }
@@ -194,11 +194,17 @@ class Vehicle {
 
   void display() {
     colorMode(HSB);
-    fill(hue, 200, 255);
     noStroke();
     pushMatrix();
     translate(position.x, position.y);
-    ellipse(0, 0, r, r);
+    //fill(hue, 200, 255);
+    //ellipse(0, 0, r, r);
+ 
+    imageMode(CENTER);
+    tint(hue, 200, 255);
+    image(textureB, 0, 0, r*2.5, r*2.5);
+    tint(hue, 0, 255);
+    image(textureF, 0, 0, r*1.8, r*1.8);
     popMatrix();
   }
 
