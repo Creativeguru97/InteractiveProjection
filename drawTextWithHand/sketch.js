@@ -8,6 +8,7 @@ let handPoses;
 const widthValue = document.querySelector('video').width;
 const heightValue = document.querySelector('video').height;
 
+
 let isModelLoaded = false;
 
 async function loadHandPose(){
@@ -96,10 +97,10 @@ canvas = p => {
   p.calculateFingerPos = () => {
     for(let i=0; i<handPoses.length; i++){
       let fingerX = p.int(p.map(
-        handPoses[i].annotations.indexFinger[0][0], 0, widthValue, p.displayWidth, 0
+        handPoses[i].annotations.indexFinger[0][0], 20, widthValue-20, p.displayWidth, 0
       ));
       let fingerY = p.int(p.map(
-        handPoses[i].annotations.indexFinger[0][1], 0, heightValue, 0, p.displayHeight
+        handPoses[i].annotations.indexFinger[0][1], 20, heightValue-20, 0, p.displayHeight
       ));
 
       let position = [fingerX, fingerY];
@@ -128,7 +129,7 @@ canvas = p => {
         handPoses[i].annotations.indexFinger[3][1],
       );
 
-      if(d > 90){
+      if(d > 35){//This is depend on input resolution
         isDrawingNow = false;
       }else{
         isDrawingNow = true;
@@ -176,6 +177,7 @@ canvas = p => {
   // if(key == 's') saveFrame(timestamp()+"_##.png");
 
   if (p.keyCode == p.DELETE || p.keyCode == p.BACKSPACE) p.clear();//Erase all
+  // if (p.keyCode == p.DELETE || p.keyCode == p.BACKSPACE) p.background(255);//Erase all
 
 }
 
