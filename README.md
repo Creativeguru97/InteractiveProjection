@@ -1,4 +1,5 @@
 # InteractiveProjection
-Practice Interactive projection with processing and Kinect
+My interactive projection works.
 
-Enjoy!!!!!! If you don't enjoy, I gonna be mad brooo!
+I use processing or p5.js for coding, and Kinect v2, PoseNet or handPose for sensing human body.
+I hope this repository can help other beginner creative coder!
