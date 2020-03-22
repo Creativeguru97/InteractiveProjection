@@ -96,12 +96,12 @@ canvas = p => {
 
   p.calculateFingerPos = () => {
     for(let i=0; i<handPoses.length; i++){
-      let fingerX = p.int(p.map(
-        handPoses[i].annotations.indexFinger[0][0], 20, widthValue-20, p.displayWidth, 0
-      ));
-      let fingerY = p.int(p.map(
-        handPoses[i].annotations.indexFinger[0][1], 20, heightValue-20, 0, p.displayHeight
-      ));
+      let fingerX = p.map(
+        handPoses[i].annotations.indexFinger[0][0], 40, widthValue-40, p.displayWidth, 0
+      );
+      let fingerY = p.map(
+        handPoses[i].annotations.indexFinger[0][1], 40, heightValue-40, 0, p.displayHeight
+      );
 
       let position = [fingerX, fingerY];
 
@@ -135,10 +135,10 @@ canvas = p => {
         isDrawingNow = true;
       }
 
-      console.log("--------");
-      console.log("distance: "+d);
-      console.log("isDrawingNow: "+isDrawingNow);
-      console.log("--------");
+      // console.log("--------");
+      // console.log("distance: "+d);
+      // console.log("isDrawingNow: "+isDrawingNow);
+      // console.log("--------");
     }
   }
 
