@@ -91,7 +91,7 @@ canvas = p => {
       }
     }
 
-    // console.log(p.frameRate());
+    console.log(p.frameRate());
   }
 
   p.calculateFingerPos = () => {
